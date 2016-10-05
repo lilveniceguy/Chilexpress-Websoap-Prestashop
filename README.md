@@ -1,5 +1,6 @@
 # Chilexpress-Websoap-Prestashop
 Modulo para prestashop basado en el websoap de Chilexpress
+El modulo base es uno basico que se utlizaba para colocar montos fijos al transportistas en ocasiones especificas, solo lo edite para adaptarlo a lo que necesitaba.
 
 Esta probado en Prestashop 1.6
 

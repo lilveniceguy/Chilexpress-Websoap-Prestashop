@@ -388,7 +388,17 @@ class mycarrier extends CarrierModule
 
 				    	$resultado = $result->respValorizarCourier;
 			    	}
-			    	$valor = $resultado->Servicios[2]->ValorServicio;
+			    	if (!empty($resultado)) {
+			    		$cantidad_servicio=count($resultado->Servicios);
+			    		if ($cantidad_servicio==2) {
+			    			$valor = $resultado->Servicios[1]->ValorServicio;
+			    		}elseif($cantidad_servicio==3){
+			    			$valor = $resultado->Servicios[2]->ValorServicio;
+			    		}else{
+			    			$valor = $resultado->Servicios[0]->ValorServicio;
+			    		}
+			    		return $valor;
+			    	}
 			    	return $valor;
 			
 		if ($this->id_carrier == (int)(Configuration::get('MYCARRIER2_CARRIER_ID')) && Configuration::get('MYCARRIER2_OVERCOST') > 1)
